@@ -17,9 +17,23 @@ Takeaways
 */
 
 // ~ the "click" event
-
+document.querySelector("#tomorrow").addEventListener("click", () => {
+//here, we decide what shoudl happen wehn the "click" event fires on tomorrow
+document.querySelector("#forever").textContent = "On June 5,2024.";
+})
 // ~ the "submit" event
+document.querySelector("form").addEventListener("submit", (event) => {
+    event.preventDefault();
+    console.log(event.target["date-input"].value);
+    document.querySelector("#soemtime").textContent = event.target["date-input"].value;
+})
 
+//const school = {
+  //  name : "Flatiron",
+   // cohortsSize : #
+//}
+
+//console.log(school.name);
 // ~ challenges
 // 1. [easy] Add another click event handler.
 // 2. [medium] Add some non-click, non-submit event listener to the page.
